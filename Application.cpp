@@ -6,8 +6,8 @@ void Application::initControls()
 	HWND parent = this->win->_getNativeHandler();
 
 	this->timerButton = CreateWindowExW(NULL, L"BUTTON", L"Start timer", BS_PUSHBUTTON | WS_VISIBLE | WS_CHILD, 150, 340, 100, 40, parent, nullptr, hInstance, nullptr);
-	this->comboBox = CreateWindowExW(NULL, L"ComboBox", NULL, WS_CHILD | WS_VISIBLE | WS_VSCROLL | CBS_DROPDOWNLIST, 225, 200, 100, 22, parent, nullptr, hInstance, nullptr);
-	this->editBox = CreateWindowExW(NULL, L"EDIT", NULL, WS_CHILD | WS_VISIBLE | WS_BORDER | ES_NUMBER, 75, 200, 150, 24, parent, nullptr, hInstance, nullptr);
+	this->comboBox = CreateWindowExW(NULL, L"ComboBox", NULL, WS_CHILD | WS_VISIBLE | WS_VSCROLL | CBS_DROPDOWNLIST, 230, 260, 100, 22, parent, nullptr, hInstance, nullptr);
+	this->editBox = CreateWindowExW(NULL, L"EDIT", NULL, WS_CHILD | WS_VISIBLE | WS_BORDER | ES_NUMBER, 75, 260, 150, 24, parent, nullptr, hInstance, nullptr);
 	
 	HFONT hFont = CreateFontW(22, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE, ANSI_CHARSET, 0, 0, DEFAULT_QUALITY, FF_SWISS, L"Roboto");
 	SendMessageW(timerButton, WM_SETFONT, TRUE, (LPARAM)hFont);
